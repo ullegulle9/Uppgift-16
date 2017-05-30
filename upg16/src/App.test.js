@@ -15,13 +15,11 @@ describe('App renders basics', () => {
 	});
 
 	it('renders Form Component', () => {
-		let wrap = shallow( <App /> );
-		let actual = wrap.contains( <Form /> );
-		expect(actual).toBe(true);
+		const div = document.createElement('div');
+		ReactDOM.render( <Form /> , div);
 	});
 	it('renders Button Component', () => {
-		let wrap = shallow( <App /> );
-		let actual = wrap.contains( <Button /> );
-		expect(actual).toBe(true);
+		const div = document.createElement('div');
+		ReactDOM.render( <Button /> , div);
 	});
 })

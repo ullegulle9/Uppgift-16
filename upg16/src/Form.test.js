@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Form from './Form.js';
 import App from './App';
 import {
-	shallow
+	shallow, mount
 } from 'enzyme';
 
 it('contains input element', () => {
@@ -30,7 +30,7 @@ describe('Form event handling tests', () => {
 	
 	it('should update name text', () => {
 		const input = 'Marre';
-		let wrap = shallow(<App />).render();
+		let wrap = mount(<App />);
 		wrap.find('.inputName').simulate('change', {
 			target: {
 				value: input
@@ -42,7 +42,7 @@ describe('Form event handling tests', () => {
 	});
 	it('should update email text', () => {
 		const input = 'martin.larsson.post@gmail.com';
-		let wrap = shallow(<App />).render();
+		let wrap = mount(<App />);
 		wrap.find('.inputMail').simulate('change', {
 			target: {
 				value: input

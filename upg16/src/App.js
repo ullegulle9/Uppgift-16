@@ -23,15 +23,28 @@ class App extends Component {
 			name: '',
 			email: ''
 		};
+		this.updateName = this.updateName.bind(this);
+		this.updateEmail = this.updateEmail.bind(this);
 	}
   render() {
     return (
       <div className="App">
-		<Form />
+		<Form handleNameInput={this.updateName}
+			handleEmailInput={this.updateEmail} />
 		<Button />
       </div>
     );
   }
+	updateName(ev){
+		this.setState({
+			name: ev.target.value
+		});
+	}
+	updateEmail(ev){
+		this.setState({
+			email: ev.target.value
+		});
+	}
 }
 
 export default App;
