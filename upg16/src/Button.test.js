@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from './Button.js';
+import App from './App';
 import {
 	shallow
 } from 'enzyme';
