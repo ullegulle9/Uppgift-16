@@ -25,13 +25,14 @@ class App extends Component {
 		};
 		this.updateName = this.updateName.bind(this);
 		this.updateEmail = this.updateEmail.bind(this);
+		this.resetState = this.resetState.bind(this);
 	}
   render() {
     return (
       <div className="App">
 		<Form handleNameInput={this.updateName}
 			handleEmailInput={this.updateEmail} />
-		<Button />
+		<Button handleClick={this.resetState}/>
       </div>
     );
   }
@@ -43,6 +44,12 @@ class App extends Component {
 	updateEmail(ev){
 		this.setState({
 			email: ev.target.value
+		});
+	}
+	resetState(ev){
+		this.setState({
+			name: '',
+			email: ''
 		});
 	}
 }
