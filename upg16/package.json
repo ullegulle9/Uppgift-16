@@ -15,6 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --color --notify",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+	"homepage": "http://ullegulle9.github.io/Uppgift-16/"
   }
+	
 }

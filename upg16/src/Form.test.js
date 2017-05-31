@@ -34,8 +34,7 @@ describe('Form event handling tests', () => {
 		wrap.find('.inputName').simulate('change', {
 			target: {
 				value: input
-			},
-			type: 'change'
+			}
 		});
 		let actual = wrap.state('name');
 		expect(actual).toBe(input);
